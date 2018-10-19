@@ -4,13 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_marginLeft="@dimen/margem_controlos"
+        android:layout_marginTop="@dimen/margem_controlos"
+        android:layout_marginRight="@dimen/margem_controlos"
+        android:background="@color/colorLabels"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/padding_labels"
+        android:text="@string/temperatura"
+        android:textColor="@color/colorTextoLabels"
+        android:textSize="@dimen/tamanho_texto_labels"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_controlos"
+        android:layout_marginRight="@dimen/margem_controlos"
+        android:background="@color/colorInputs"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned"
+        android:padding="@dimen/padding_labels"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_controlos"
+        android:layout_marginTop="@dimen/margem_controlos"
+        android:layout_marginRight="@dimen/margem_controlos"
+        android:background="@color/colorLabels"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/padding_labels"
+        android:text="@string/unidade"
+        android:textColor="@color/colorTextoLabels"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_controlos"
+        android:layout_marginRight="@dimen/margem_controlos"
+        android:background="@color/colorInputs"
+        android:gravity="center_horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonFahrenheit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_labels"
+            android:text="@string/fahrenheit" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCelsius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_labels"
+            android:text="@string/celsius" />
+    </RadioGroup>
 
 </LinearLayout>
