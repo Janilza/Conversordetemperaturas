@@ -24,7 +24,7 @@ public class TemperatureUnitTest {
         assertEquals(4.0,x.getCelsius(), Tolerancia_decimais);
         assertEquals(39.2,x.getFahrenheit(), Tolerancia_decimais);
 
-        x = new TemperaturaFahrenheit( 23.0 );
+        x = new TemperaturaCelsius( 23.0 );
         assertEquals(23.0,x.getCelsius(), Tolerancia_decimais);
         assertEquals(73.4,x.getFahrenheit(), Tolerancia_decimais);
 }
