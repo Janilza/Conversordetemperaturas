@@ -11,7 +11,7 @@ public class TemperaturaCelsius extends Temperatura {
      */
     @Override
     public double getFahrenheit() {
-        return valor * 9/5 + 32; // todo: corrigir bug
+        return valor * 9.0/5.0 + 32.0; // todo: corrigir bug
     }
 
     @Override
