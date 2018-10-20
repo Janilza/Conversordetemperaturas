@@ -1,6 +1,10 @@
 package pt.ipg.conversordetemperaturas;
 
 public class TemperaturaCelsius extends Temperatura {
+    public TemperaturaCelsius(double valor){
+
+        this.valor = valor;
+    }
     /**
      *
      * @return
