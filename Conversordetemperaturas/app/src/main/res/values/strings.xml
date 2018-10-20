@@ -5,4 +5,6 @@
     <string name="unidade">Unidade</string>
     <string name="celsius">Celsius</string>
     <string name="fahrenheit">Fahrenheit</string>
+    <string name="title_activity_mostra_temperatura">Temperatura</string>
+    <string name="fahrenheit">Fahrenheit</string>
 </resources>

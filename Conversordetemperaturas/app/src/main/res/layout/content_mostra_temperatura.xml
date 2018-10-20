@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MostraTemperaturaActivity"
+    tools:showIn="@layout/activity_mostra_temperatura"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_controlos"
+        android:layout_marginTop="@dimen/margem_controlos"
+        android:layout_marginRight="@dimen/margem_controlos"
+        android:background="@color/colorLabels"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/padding_labels"
+        android:text="@string/fahrenheit"
+        android:textColor="@color/colorTextoLabels"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_controlos"
+        android:layout_marginRight="@dimen/margem_controlos"
+        android:layout_weight="1"
+        android:background="@color/colorInputs"
+        android:gravity="center_horizontal"
+        android:paddingLeft="@dimen/padding_labels"
+        android:paddingTop="@dimen/padding_labels"
+        android:paddingRight="@dimen/padding_labels"
+        android:textColor="@color/colorTextoLabels"
+        android:textSize="@dimen/TamanhoValores"
+        android:textStyle="bold"
+        tools:text="0.00º" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_controlos"
+        android:layout_marginTop="@dimen/margem_controlos"
+        android:layout_marginRight="@dimen/margem_controlos"
+        android:background="@color/colorLabels"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="@dimen/padding_labels"
+        android:text="Celsius"
+        android:textColor="@color/colorTextoLabels"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_controlos"
+        android:layout_marginRight="@dimen/margem_controlos"
+        android:layout_marginBottom="@dimen/margem_controlos"
+        android:layout_weight="1"
+        android:background="@color/colorInputs"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/padding_labels"
+        android:textColor="@color/colorTextoLabels"
+        android:textSize="@dimen/TamanhoValores"
+        android:textStyle="bold"
+        tools:text="23.45º" />
+
+</LinearLayout>
