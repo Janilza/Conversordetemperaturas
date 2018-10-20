@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginLeft="@dimen/margem_controlos"
         android:layout_marginTop="@dimen/margem_controlos"
+        android:layout_marginEnd="8dp"
         android:layout_marginRight="@dimen/margem_controlos"
         android:background="@color/colorLabels"
         android:gravity="center_horizontal"
@@ -21,49 +23,49 @@
         android:text="@string/temperatura"
         android:textColor="@color/colorTextoLabels"
         android:textSize="@dimen/tamanho_texto_labels"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margem_controlos"
-        android:layout_marginRight="@dimen/margem_controlos"
         android:background="@color/colorInputs"
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="numberSigned"
         android:padding="@dimen/padding_labels"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:targetApi="o" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margem_controlos"
-        android:layout_marginTop="@dimen/margem_controlos"
-        android:layout_marginRight="@dimen/margem_controlos"
+        android:layout_marginTop="20dp"
         android:background="@color/colorLabels"
         android:gravity="center_horizontal"
         android:padding="@dimen/padding_labels"
         android:text="@string/unidade"
         android:textColor="@color/colorTextoLabels"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <RadioGroup
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margem_controlos"
-        android:layout_marginRight="@dimen/margem_controlos"
         android:background="@color/colorInputs"
-        android:gravity="center_horizontal">
-
-        <RadioButton
-            android:id="@+id/radioButtonFahrenheit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/padding_labels"
-            android:text="@string/fahrenheit" />
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <RadioButton
             android:id="@+id/radioButtonCelsius"
@@ -71,6 +73,13 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_labels"
             android:text="@string/celsius" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFahrenheit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_labels"
+            android:text="@string/fahrenheit" />
     </RadioGroup>
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
