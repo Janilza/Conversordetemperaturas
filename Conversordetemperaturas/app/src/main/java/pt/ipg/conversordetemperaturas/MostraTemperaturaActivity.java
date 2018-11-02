@@ -31,13 +31,11 @@ public class MostraTemperaturaActivity extends AppCompatActivity {
 
         TextView textViewCelsius = (TextView) findViewById(R.id.textViewCelsius);
         TextView textViewFahrenheit = (TextView) findViewById(R.id.textViewFahrenheit);
+
         Double celsius = AppData.temperatura.getCelsius();
         Double fahrenheit = AppData.temperatura.getFahrenheit();
 
-        DecimalFormat df = new DecimalFormat("#.00");//formatar o numero de casas decimais
-        textViewCelsius.setText(df.format(celsius));
-        textViewFahrenheit.setText(df.format(fahrenheit));
-
+        textViewCelsius.setText(String.format("%.2f", celsius));
+        textViewFahrenheit.setText(String.format("%.2f", fahrenheit));
     }
-
 }

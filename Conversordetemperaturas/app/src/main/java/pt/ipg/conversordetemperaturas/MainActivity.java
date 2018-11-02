@@ -58,8 +58,23 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MostraTemperaturaActivity.class);
         EditText  editTextTemperatura = (EditText) findViewById(R.id.editTextTemperatura);
         RadioButton radioButtonFahrenheit = (RadioButton) findViewById(R.id.radioButtonFahrenheit);
+
         String s = editTextTemperatura.getText().toString();
-        Double valorTemperatura = Double.parseDouble(s);
+        if (s.isEmpty()){
+
+            editTextTemperatura.setError("Por favor preencha a temperatura");
+            editTextTemperatura.requestFocus();
+            return;
+        }
+
+        double valorTemperatura = 0;
+        try {
+            valorTemperatura = Double.parseDouble(s);
+        } catch (NumberFormatException e) {
+            editTextTemperatura.setError("Valor de temperatura inválido");
+            editTextTemperatura.requestFocus();
+            return;
+        }
 
         if(radioButtonFahrenheit.isChecked()){
 
