@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         String s = editTextTemperatura.getText().toString();
         if (s.isEmpty()){
 
-            editTextTemperatura.setError("Por favor preencha a temperatura");
+            editTextTemperatura.setError(getString(R.string.insira_temperatura));
             editTextTemperatura.requestFocus();
             return;
         }
