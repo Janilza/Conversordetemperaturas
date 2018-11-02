@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextTemperatura"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorInputs"
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTemperatura" />
 
     <RadioGroup
         android:id="@+id/radioGroup"

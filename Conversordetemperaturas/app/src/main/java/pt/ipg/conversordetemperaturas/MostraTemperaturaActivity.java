@@ -6,6 +6,9 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
+
+import java.text.DecimalFormat;
 
 public class MostraTemperaturaActivity extends AppCompatActivity {
 
@@ -25,6 +28,16 @@ public class MostraTemperaturaActivity extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        TextView textViewCelsius = (TextView) findViewById(R.id.textViewCelsius);
+        TextView textViewFahrenheit = (TextView) findViewById(R.id.textViewFahrenheit);
+        Double celsius = AppData.temperatura.getCelsius();
+        Double fahrenheit = AppData.temperatura.getFahrenheit();
+
+        DecimalFormat df = new DecimalFormat("#.00");//formatar o numero de casas decimais
+        textViewCelsius.setText(df.format(celsius));
+        textViewFahrenheit.setText(df.format(fahrenheit));
+
     }
 
 }
